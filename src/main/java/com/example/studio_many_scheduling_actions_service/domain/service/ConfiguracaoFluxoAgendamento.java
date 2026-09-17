@@ -12,11 +12,14 @@ import static java.util.Map.entry;
 public class ConfiguracaoFluxoAgendamento implements ValidadorTransicao {
 
     private static final Map<StatusAgendamento, Set<StatusAgendamento>> TRANSICOES = Map.ofEntries(
+            /*
         entry(AGUARDANDO_SINAL, Set.of(
             CONFIRMADO_CLIENTE,
             CANCELADO_CLIENTE,
             CANCELADO_AUTOMATICAMENTE
         )),
+
+             */
         entry(CONFIRMADO_CLIENTE, Set.of(
             EM_ESPERA_PROFISSIONAL
         )),
